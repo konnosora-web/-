@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newfoundland & Labrador</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Nunito',sans-serif;
+  background:#eef3ff;
+  padding:40px 20px;
+  display:flex;
+  justify-content:center;
+}
+
+.poster{
+  width:100%;
+  max-width:1000px;
+}
+
+/* Header */
+
+.header{
+  background:linear-gradient(135deg,#6c63ff,#f7797d);
+  border-radius:30px 30px 0 0;
+  text-align:center;
+  padding:45px 30px 35px;
+}
+
+.header-eyebrow{
+  color:rgba(255,255,255,.75);
+  font-size:10pt;
+  font-weight:900;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.header h1{
+  font-family:'Pacifico',cursive;
+  color:white;
+  font-size:clamp(28pt,5vw,42pt);
+}
+
+.wave-wrap{
+  height:40px;
+  background:linear-gradient(135deg,#6c63ff,#f7797d);
+}
+
+.wave-wrap svg{
+  display:block;
+}
+
+/* Body */
+
+.body{
+  background:white;
+  padding:30px;
+  border-radius:0 0 30px 30px;
+  box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin-bottom:20px;
+}
+
+.card{
+  border-radius:22px;
+  padding:18px;
+}
+
+.cities{
+  background:#fff0f3;
+}
+
+.fun{
+  background:#eef2ff;
+}
+
+.geo{
+  background:#ecfff4;
+}
+
+.food{
+  background:#fffbea;
+}
+
+.card-title{
+  font-size:13pt;
+  font-weight:900;
+  margin-bottom:12px;
+  padding-bottom:8px;
+}
+
+.cities .card-title{
+  color:#df245f;
+  border-bottom:3px solid #ffb7cb;
+}
+
+.fun .card-title{
+  color:#2f52ff;
+  border-bottom:3px solid #c2cfff;
+}
+
+.geo .card-title{
+  color:#00915f;
+  border-bottom:3px solid #b4efd1;
+}
+
+.food .card-title{
+  color:#c67b00;
+  border-bottom:3px solid #ffe0a2;
+}
+
+.card-body{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+
+.card-text{
+  flex:1;
+  font-size:9.5pt;
+  color:#444;
+  line-height:1.6;
+}
+
+.card-text ul{
+  padding-left:18px;
+}
+
+.card-text li{
+  margin-bottom:12px;
+}
+
+.card-text strong{
+  color:#111;
+}
+
+.photos{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.photo-upload{
+  width:85px;
+  height:85px;
+  border:2px dashed #ccc;
+  border-radius:12px;
+  position:relative;
+  overflow:hidden;
+  background:#fafafa;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.photo-upload input{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  cursor:pointer;
+}
+
+.ph-icon{
+  font-size:22px;
+}
+
+.ph-label{
+  font-size:7pt;
+  color:#999;
+  font-weight:700;
+}
+
+.photo-upload img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Bottom */
+
+.bottom{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.bottom-card{
+  border-radius:22px;
+  padding:18px;
+}
+
+.time{
+  background:linear-gradient(135deg,#fff7d8,#ffe6a5);
+}
+
+.dogs{
+  background:linear-gradient(135deg,#ece8ff,#d7caff);
+}
+
+.bottom-title{
+  font-size:12pt;
+  font-weight:900;
+  margin-bottom:12px;
+}
+
+.bottom-text{
+  font-size:9.5pt;
+  line-height:1.7;
+  color:#444;
+}
+
+.bottom-text ul{
+  padding-left:18px;
+}
+
+.bottom-text li{
+  margin-bottom:12px;
+}
+
+.bottom-text strong{
+  color:#111;
+}
+
+@media(max-width:700px){
+
+.grid{
+  grid-template-columns:1fr;
+}
+
+.bottom{
+  grid-template-columns:1fr;
+}
+
+.photo-upload{
+  width:70px;
+  height:70px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="poster">
+
+<div class="header">
+  <div class="header-eyebrow">✈ Travel Guide</div>
+  <h1>Newfoundland & Labrador</h1>
+</div>
+
+<div class="wave-wrap">
+<svg viewBox="0 0 900 40" preserveAspectRatio="none" width="100%" height="40">
+<path d="M0,0 Q225,40 450,20 Q675,0 900,30 L900,40 L0,40 Z"
+fill="white"/>
+</svg>
+</div>
+
+<div class="body">
+
+<div class="grid">
+
+<!-- CITIES -->
+
+<div class="card cities">
+
+<div class="card-title">
+🏙️ Notable Cities
+</div>
+
+<div class="card-body">
+
+<div class="card-text">
+
+<ul>
+
+<li>
+<strong>St. John's</strong><br>
+The capital city known for colorful houses,
+historic streets, and ocean views.
+</li>
+
+<li>
+<strong>Corner Brook</strong><br>
+A beautiful city surrounded by forests,
+mountains, and hiking trails.
+</li>
+
+<li>
+<strong>Happy Valley–Goose Bay</strong><br>
+A major Labrador community famous for
+wildlife and outdoor adventures.
+</li>
+
+</ul>
+
+</div>
+
+<div class="photos">
+
+<div class="photo-upload" id="cities-1">
+<input type="file" accept="image/*" onchange="loadPhoto(this,'cities-1')">
+<span class="ph-icon">📷</span>
+<span class="ph-label">Photo 1</span>
+</div>
+
+<div class="photo-upload" id="cities-2">
+<input type="file" accept="image/*" onchange="loadPhoto(this,'cities-2')">
+<span class="ph-icon">📷</span>
+<span class="ph-label">Photo 2</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FUN -->
+
+<div class="card fun">
+
+<div class="card-title">
+🏄 Fun Things to Do
+</div>
+
+<div class="card-body">
+
+<div class="card-text">
+
+<ul>
+
+<li>
+<strong>Iceberg Watching</strong><br>
+See giant icebergs that drift south from
+Greenland every spring.
+</li>
+
+<li>
+<strong>Whale Watching</strong><br>
+Watch humpback whales leap from the water
+along the rugged coastline.
+</li>
+
+<li>
+<strong>Coastal Hiking</strong><br>
+Explore scenic trails with cliffs,
+wildflowers, and ocean views.
+</li>
+
+</ul>
+
+</div>
+
+<div class="photos">
+
+<div class="photo-upload" id="fun-1">
+<input type="file" accept="image/*" onchange="loadPhoto(this,'fun-1')">
+<span class="ph-icon">📷</span>
+<span class="ph-label">Photo 1</span>
+</div>
+
+<div class="photo-upload" id="fun-2">
+<input type="file" accept="image/*" onchange="loadPhoto(this,'fun-2')">
+<span class="ph-icon">📷</span>
+<span class="ph-label">Photo 2</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<!-- GEO -->
+
+<div class="card geo">
+
+<div class="card-title">
+⛰️ Cool Geo Features
+</div>
+
+<div class="card-body">
+
+<div class="card-text">
+
+<ul>
+
+<li>
+<strong>Gros Morne National Park</strong><br>
+A UNESCO World Heritage Site with mountains,
+fjords, and unique landscapes.
+</li>
+
+<li>
+<strong>Western Brook Pond</strong><br>
+A beautiful freshwater fjord surrounded by
+cliffs and waterfalls.
+</li>
+
+<li>
+<strong>The Tablelands</strong><br>
+A rare place where Earth's mantle rocks
+can be seen on the surface.
+</li>
+
+</ul>
+
+</div>
+
+<div class="photos">
+
+<div class="photo-upload" id="geo-1">
+<input type="file" accept="image/*" onchange="loadPhoto(this,'geo-1')">
+<span class="ph-icon">📷</span>
+<span class="ph-label">Photo 1</span>
+</div>
+
+<div class="photo-upload" id="geo-2">
+<input type="file" accept="image/*" onchange="loadPhoto(this,'geo-2')">
+<span class="ph-icon">📷</span>
+<span class="ph-label">Photo 2</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOD -->
+
+<div class="card food">
+
+<div class="card-title">
+🍟 Food to Try
+</div>
+
+<div class="card-body">
+
+<div class="card-text">
+
+<ul>
+
+<li>
+<strong>Fish & Chips</strong><br>
+Fresh Atlantic cod covered with crispy batter.
+A famous local seafood meal.
+</li>
+
+<li>
+<strong>Jiggs Dinner</strong><br>
+A traditional dish with salt beef,
+vegetables, and peas pudding.
+</li>
+
+<li>
+<strong>Toutons</strong><br>
+Fried bread dough usually enjoyed with
+butter and sweet molasses.
+</li>
+
+</ul>
+
+</div>
+
+<div class="photos">
+
+<div class="photo-upload" id="food-1">
+<input type="file" accept="image/*" onchange="loadPhoto(this,'food-1')">
+<span class="ph-icon">📷</span>
+<span class="ph-label">Photo 1</span>
+</div>
+
+<div class="photo-upload" id="food-2">
+<input type="file" accept="image/*" onchange="loadPhoto(this,'food-2')">
+<span class="ph-icon">📷</span>
+<span class="ph-label">Photo 2</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- BOTTOM -->
+
+<div class="bottom">
+
+<!-- TIME -->
+
+<div class="bottom-card time">
+
+<div class="bottom-title">
+🗓️ Best Time to Visit
+</div>
+
+<div class="bottom-text">
+
+<ul>
+
+<li>
+<strong>May – June</strong><br>
+The best season to see both whales
+and icebergs together.
+</li>
+
+<li>
+<strong>July – August</strong><br>
+Warm weather is perfect for hiking,
+boat tours, and festivals.
+</li>
+
+<li>
+<strong>September – October</strong><br>
+Enjoy colorful autumn scenery with
+fewer visitors.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<!-- DOGS -->
+
+<div class="bottom-card dogs">
+
+<div class="bottom-title">
+🐶 Famous Dogs
+</div>
+
+<div class="card-body">
+
+<div class="bottom-text">
+
+<ul>
+
+<li>
+<strong>Labrador Retriever</strong><br>
+Friendly, smart, and loyal.
+One of the world's most popular dogs.
+</li>
+
+<li>
+<strong>Newfoundland Dog</strong><br>
+A giant gentle dog famous for swimming
+and water rescue.
+</li>
+
+<li>
+<strong>Rescue Heritage</strong><br>
+These dogs helped fishermen and saved
+people near the ocean.
+</li>
+
+</ul>
+
+</div>
+
+<div class="photos">
+
+<div class="photo-upload" id="dogs-1">
+<input type="file" accept="image/*" onchange="loadPhoto(this,'dogs-1')">
+<span class="ph-icon">📷</span>
+<span class="ph-label">Photo 1</span>
+</div>
+
+<div class="photo-upload" id="dogs-2">
+<input type="file" accept="image/*" onchange="loadPhoto(this,'dogs-2')">
+<span class="ph-icon">📷</span>
+<span class="ph-label">Photo 2</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function loadPhoto(input,boxId){
+
+const file=input.files[0];
+
+if(!file) return;
+
+
+const reader=new FileReader();
+
+
+reader.onload=function(e){
+
+const box=document.getElementById(boxId);
+
+
+const old=box.querySelector("img");
+
+if(old){
+old.remove();
+}
+
+
+const icon=box.querySelector(".ph-icon");
+const label=box.querySelector(".ph-label");
+
+
+if(icon){
+icon.style.display="none";
+}
+
+
+if(label){
+label.style.display="none";
+}
+
+
+
+const img=document.createElement("img");
+
+img.src=e.target.result;
+
+
+box.appendChild(img);
+
+
+}
+
+
+reader.readAsDataURL(file);
+
+
+}
+
+
+</script>
+
+</body>
+</html>
+    
+  </body>
+  
+</html>
